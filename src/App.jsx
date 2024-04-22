@@ -1,5 +1,5 @@
 
-import {Footer,Navbar} from './components';
+import {Footer,Navbar, Products} from './components';
 
 import './App.css';
 
@@ -10,10 +10,11 @@ function App() {
     <div className="App">
      
     < Navbar />
-    < Footer/>
+    
       <main>
-     <h1>main Area</h1>
+     <Products/>
       </main>
+    < Footer/>
       
       </div>
     
