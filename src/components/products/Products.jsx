@@ -38,7 +38,12 @@ const addProductTocart = (product) => {
             </div>
             <div className="products-grid">
             {products.map((product) => (
-                <div><Productcard key ={product.id} product ={product} addtoCart = {addProductTocart} /></div>
+                <div><Productcard 
+                key ={product.id} 
+                product ={product} 
+                addtoCart = {addProductTocart} 
+                isAddedToCart={productAlreadyAdded(product.id)}
+                /></div>
             ))}
             </div>
         </div>

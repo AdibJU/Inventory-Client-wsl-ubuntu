@@ -1,6 +1,6 @@
 import './Productcard.css'
 
-export  function Productcard({product,addtoCart}) {
+export  function Productcard({product,isAddedToCart,addtoCart}) {
   const handleAddcart = () => addtoCart(product);
   return (
     <div className="product-card">
@@ -8,6 +8,8 @@ export  function Productcard({product,addtoCart}) {
         <p>{`TK ${product.price}`}</p>
         <p>{`Quantity: ${product.quantity}`}</p>
         <button onClick={handleAddcart} className='product-cart-btn'>Add to Cart</button>
+        {isAddedToCart && (<button className='product-cart-btn danger'>Remove from Cart</button>)}
+    
     </div>
   )
 }
